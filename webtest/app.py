@@ -131,7 +131,7 @@ class TestResponse(Response):
             if tag != 'form':
                 continue
             if end:
-                assert started, (
+                assert started!=None, (
                     "</form> unexpected at %s" % match.start())
                 form_texts.append(self.testbody[started:match.end()])
                 started = None
